@@ -60,9 +60,9 @@ populateDefaults = () => {
     let teamOptions = "<option value='' disabled selected>Select Team...</option>";
     let employeeOptions = "<option value='' disabled selected>Select Employee...</option>";
     for (const data of employeeData) {
-        teamOptions += "<option> " + data.team + "</option>";
+        teamOptions += `<option>${data.team}</option>`;
         for (const employee of data.employees) {
-            employeeOptions += "<option> " + employee + "</option>";
+            employeeOptions += `<option>${employee}</option>`;
         } 
     } 
     document.getElementById("teamSelect").innerHTML = teamOptions;
@@ -87,7 +87,7 @@ onTeamSelect = (selectObject) => {
     for (const data of employeeData) {
         if(data.team !== selectObject.value) continue
         for (const employee of data.employees) {
-            employeeOptions += "<option> " + employee + "</option>";
+            employeeOptions += `<option>${employee}</option>`;
         }
         break
     } 
