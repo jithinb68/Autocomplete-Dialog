@@ -99,6 +99,8 @@ onTeamSelect = (selectObject) => {
 
 const submitBtn = document.getElementById('submitBtn');
 const closeBtn = document.getElementById('modalCloseBtn');
+const closeIcon = document.getElementById('closeIcon');
+
 
 
 submitBtn.onclick = () => {
@@ -118,9 +120,8 @@ submitBtn.onclick = () => {
     }
 }
 
-closeBtn.onclick = () => {
-    onboardModal.style.display = "none"
-}
+closeBtn.onclick = () => onboardModal.style.display = "none";
+closeIcon.onclick = () => onboardModal.style.display = "none";
 
 // Make Employee Card
 
