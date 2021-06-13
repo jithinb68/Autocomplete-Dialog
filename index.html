@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autocomplete-Dialog</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <h1 class="title">Welcome to employee onboarding of the company</h1>
+    <div class="onboard-wrapper">
+        <h3>Onboard a new employee for your organisation</h3>
+        <button id="onboardButton" class="employee-onboard-btn">Onboard an Employee</button>
+    </div>
+    <div id="employeeCardWrapper" class="employee-card-wrapper">
+        <h1>Oboarded Employees</h1>
+    </div>
+    <div id="onboardModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Select an employee</h3>
+            <div class="welcome-email-wrapper">
+                <input type="checkbox" id="welcomeMail" name="welcome-mail" value="">
+                <p class="welcome-text">Sent welcome email to employee</p>
+            </div>
+            <div class="team-select-wrapper">
+                <p>Select a team in the organisation</p>
+                <select name="team" id="teamSelect" onchange="onTeamSelect(this)"></select>
+                <div id="error-team-select" class="alert">Please select your team *</div>
+            </div>
+            <div class="employee-select-wrapper">
+                <p>Select an employee</p>
+                <select name="employee" id="employeeSelect" onchange="onEmployeeSelect(this)"></select>
+                <div id="error-employee-select"  class="alert">Please select your employee *</div>
+            </div>
+            <div class="btn-action-wrapper">
+                <button id="modalCloseBtn">Close</button>
+                <button id="submitBtn">OK</button>
+            </div>
+        </div>
+    </div>
+    <script src="assets/script.js"></script>
+</body>
+</html>
